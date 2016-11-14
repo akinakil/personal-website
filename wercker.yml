@@ -5,7 +5,7 @@ build:
       packages: git
     - add-to-known_hosts:
       hostname: github.com
-      fingerprint: 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48
+      fingerprint: b0:e6:cf:c0:93:5e:a9:b5:f1:52:7e:87:e3:a9:5c:21
     - script:
       name: Initialize submodules
       code: |
@@ -19,11 +19,11 @@ deploy:
       name: Push to github.
       code: |
         cd public
-        remote="https://$GIT_TOKEN@github.com/Yengas/yengas.github.io.git"
+        remote="https://$GIT_TOKEN@github.com/akinakil/akinakil.github.io.git"
         rm -rf .git
         git init
-        git config user.email "yigitcan@hotmail.com.tr"
-        git config user.name "Yengas"
+        git config user.email "akinakillioglu@gmail.com"
+        git config user.name "akinakil"
         git add .
         git commit -m "Automated wercker build."
         git push -f "$remote" master
